@@ -151,7 +151,6 @@
     <Content Include="ghindaVideoPlayer.css" />
     <Content Include="Scripts\Script.js" />
     <Content Include="Style\style.css" />
-    <Content Include="t_killerinstinct_riptor_1280x720_3500_h32.mp4" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
