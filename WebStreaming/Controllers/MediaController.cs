@@ -15,28 +15,16 @@ using WebStreaming.Controllers;
 namespace WebStreaming.Controllers
 {
 
-
-
-
-
-
-
-
     public class MediaController : ApiController
     {
 
 
-
-        // bufferSize
         public const int bufferSize = 1024; 
 
         public static readonly string InitialDirectory;
         public static  List<string> MediaFilesList;
 
      
-
-        
-
         static MediaController()
         {
             InitialDirectory = WebConfigurationManager.AppSettings["InitialDirectory"];
@@ -54,13 +42,8 @@ namespace WebStreaming.Controllers
         [HttpGet]
         public HttpResponseMessage Play(string f)
         {
-
-      
-
             FileInfo fileInfo = new FileInfo(Path.Combine(InitialDirectory, f));
 
-
-            //if file is Exists
             if (!fileInfo.Exists)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
 
@@ -157,8 +140,6 @@ namespace WebStreaming.Controllers
 
      private static List<string> GetMediaFiles(string initDir)
         {
-
-
             var files = new List<string>(Directory.GetFiles(initDir, "*.*", SearchOption.AllDirectories));
             return files;
         }
